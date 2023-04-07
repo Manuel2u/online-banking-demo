@@ -1,13 +1,11 @@
-import {Text, View, SafeAreaView} from 'react-native';
-import React from 'react';
+import React, {Fragment} from 'react';
+import {AppNavigator} from './src/navigation';
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <View className="flex justify-center items-center h-screen">
-        <Text className="text-3xl">Hello World</Text>
-      </View>
-    </SafeAreaView>
+    <Fragment>
+      <AppNavigator />
+    </Fragment>
   );
 };
 
