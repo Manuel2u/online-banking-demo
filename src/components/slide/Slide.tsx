@@ -24,7 +24,7 @@ const Slide = ({
           <Image className="h-screen w-screen" source={img} />
         </View>
         <View className="absolute z-20 flex items-end pr-8 mt-16 w-screen">
-          <TouchableOpacity onPress={() => OnSkip()}>
+          <TouchableOpacity className="" onPress={() => OnSkip()}>
             <Text className="font-semibold text-xl text-white">Skip</Text>
           </TouchableOpacity>
         </View>

@@ -24,6 +24,7 @@ const OnBoard = ({navigation}: any) => {
   };
 
   const handleSkip = () => {
+    console.log('I hav been clicked');
     navigation.navigate('SignIn');
   };
 
