@@ -2,20 +2,20 @@ import {View, Image, Text, TouchableOpacity} from 'react-native';
 import React, {Fragment} from 'react';
 
 const Slide = ({
-  navigation,
   img,
   heading,
   text,
-  onNext,
+  OnNext,
   OnSkip,
 }: {
   img: any;
   heading: string;
   text: string;
-  onNext: any;
+  OnNext: any;
   navigation: any;
   OnSkip: any;
 }) => {
+  // console.log(navigation);
   return (
     <Fragment>
       <View className="relative inset-0">
@@ -23,8 +23,12 @@ const Slide = ({
         <View className="absolute inset-0 z-0">
           <Image className="h-screen w-screen" source={img} />
         </View>
-        <View className="absolute z-20 flex items-end pr-8 mt-16 w-screen">
-          <TouchableOpacity className="" onPress={() => OnSkip()}>
+        <View className="absolute z-40 flex items-end pr-8 mt-16 w-screen">
+          <TouchableOpacity
+            className=""
+            onPress={() => {
+              OnSkip();
+            }}>
             <Text className="font-semibold text-xl text-white">Skip</Text>
           </TouchableOpacity>
         </View>
@@ -41,8 +45,7 @@ const Slide = ({
           <TouchableOpacity
             className="bg-blue-800 rounded-md w-80 h-14 flex items-center justify-center"
             onPress={() => {
-              console.log('Next button pressed');
-              onNext();
+              OnNext();
             }}>
             <Text className="text-2xl text-white font-medium">Next</Text>
           </TouchableOpacity>

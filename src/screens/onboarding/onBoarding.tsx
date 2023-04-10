@@ -24,7 +24,6 @@ const OnBoard = ({navigation}: any) => {
   };
 
   const handleSkip = () => {
-    console.log('I hav been clicked');
     navigation.navigate('SignIn');
   };
 
@@ -33,7 +32,7 @@ const OnBoard = ({navigation}: any) => {
       img={data[id].img}
       heading={data[id].heading}
       text={data[id].text}
-      onNext={handleNext}
+      OnNext={handleNext}
       navigation={navigation}
       OnSkip={handleSkip}
     />
