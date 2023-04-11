@@ -23,7 +23,7 @@ const Slide = ({
         <View className="absolute inset-0 z-0">
           <Image className="h-screen w-screen" source={img} />
         </View>
-        <View className="absolute z-40 flex items-end pr-8 mt-16 w-screen">
+        <View className="absolute z-40 flex items-end pr-8 mt-14 w-screen">
           <TouchableOpacity
             className=""
             onPress={() => {
@@ -33,9 +33,11 @@ const Slide = ({
           </TouchableOpacity>
         </View>
         <View className="absolute flex justify-end pb-10 gap-y-7 items-center w-screen h-screen z-20">
-          <View>
-            <Text className="text-white text-4xl font-bold">{heading}</Text>
-            <Text className="text-center w-72  text-gray-200">{text}</Text>
+          <View className="w-3/4">
+            <Text className="text-white text-center text-4xl font-bold">
+              {heading}
+            </Text>
+            <Text className="text-center text-gray-200">{text}</Text>
           </View>
           <View className="flex flex-row gap-x-2">
             <View className="w-2 h-2 bg-white rounded-full" />
